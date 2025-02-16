@@ -1,35 +1,21 @@
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
+let totalCalories = 2316;
+let burnedCalories = 0;
+
+function addMeal(mealType) {
+    let calories = prompt(`Enter calories for ${mealType}:`);
+    if (calories) {
+        totalCalories -= parseInt(calories);
+        updateDashboard();
+    }
 }
 
-.container {
-    background: white;
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+function logCaloriesBurned() {
+    let burned = document.getElementById("burned-calories").value;
+    burnedCalories += parseInt(burned);
+    updateDashboard();
 }
 
-input {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px;
-}
-
-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #218838;
+function updateDashboard() {
+    document.getElementById("calories-left").innerText = totalCalories - burnedCalories;
 }
