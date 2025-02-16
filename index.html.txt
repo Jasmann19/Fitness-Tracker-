@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker</h1>
+        <label for="calorieLimit">Daily Calorie Limit:</label>
+        <input type="number" id="calorieLimit" placeholder="Enter limit">
+
+        <label for="caloriesConsumed">Calories Consumed:</label>
+        <input type="number" id="caloriesConsumed" placeholder="Enter calories">
+
+        <button onclick="addCalories()">Add</button>
+
+        <h2>Weight Tracking</h2>
+        <label for="currentWeight">Current Weight:</label>
+        <input type="number" id="currentWeight" placeholder="Enter weight">
+
+        <label for="goalWeight">Goal Weight:</label>
+        <input type="number" id="goalWeight" placeholder="Enter goal weight">
+
+        <button onclick="trackWeight()">Track Progress</button>
+
+        <h3 id="progressMessage"></h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
